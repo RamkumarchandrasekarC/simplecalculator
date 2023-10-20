@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="end"
+        android:text="Result"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            app:strokeColor="#51C1F4"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input1"
+                android:inputType="number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 1st Number"
+                android:textSize="20dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            app:strokeColor="#51C1F4"
+            app:strokeWidth="1dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter 2nd Number"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/plusCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                app:strokeColor="#1BCDBD"
+                app:strokeWidth="2dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#1BCDBD"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    android:text="(+)"
+                    android:textSize="16sp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/minusCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:strokeColor="#1BCDBD"
+                app:strokeWidth="2dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#1BCDBD"
+                    android:text="(-)"
+                    android:textSize="16sp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/multiplyCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:strokeColor="#1BCDBD"
+                app:strokeWidth="2dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/multiply"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#1BCDBD"
+                    android:text="(*)"
+                    android:textSize="16sp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/divideCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                app:strokeColor="#1BCDBD"
+                app:strokeWidth="2dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/divide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#1BCDBD"
+                    android:text="(/)"
+                    android:textSize="16sp"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="8dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:text="sin"
+                    android:id="@+id/sin_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="cos"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/cos_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:text="tan"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/tan_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:text="ln"
+                    android:id="@+id/ln_button"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="AC"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/clr_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rand"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/ac_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="pow"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/pow_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:text="log"
+                    android:id="@+id/log_button"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:text="EE"
+                    android:id="@+id/ee_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="sinh"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/sinh_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="tanh"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/tanh_button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1/x"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/inverse_button"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
